@@ -20,7 +20,8 @@ function NewCommentForm({ place, onSubmit }) {
             setAuthors(users)
         }
         fetchData()
-    }, [])
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
 
     let authorOptions = authors.map(author => {
         return <option key={author.userId} value={author.userId}>{author.firstName} {author.lastName}</option>
