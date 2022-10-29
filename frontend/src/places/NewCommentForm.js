@@ -2,6 +2,7 @@ import { useState, useEffect } from "react"
 import { useHistory } from "react-router"
 
 function NewCommentForm({ place, onSubmit }) {
+    
 
     const [authors, setAuthors] = useState([])
 
@@ -20,7 +21,7 @@ function NewCommentForm({ place, onSubmit }) {
             setAuthors(users)
         }
         fetchData()
-        // eslint-disable-next-line react-hooks/exhaustive-deps
+          // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     let authorOptions = authors.map(author => {
